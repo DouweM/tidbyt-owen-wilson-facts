@@ -1,7 +1,8 @@
 load("http.star", "http")
 load("xpath.star", "xpath")
 load("render.star", "render")
-load("pixlib/const.star", "const") # https://github.com/DouweM/tap-pixlet/blob/main/tap_pixlet/pixlib/const.star
+# https://github.com/DouweM/tap-pixlet/blob/main/tap_pixlet/pixlib/const.star
+load("pixlib/const.star", "const")
 
 URL = "https://www.owenwilsonfactory.com/facts?format=rss"
 
@@ -9,7 +10,7 @@ def main(config):
   response = http.get(URL)
 
   if response.status_code != 200:
-    fail("Failed to fetch RSS feed")
+    fail("Failed to load Owen Wilson FACTory feed")
 
   data = response.body()
   doc = xpath.loads(data)

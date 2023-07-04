@@ -1,7 +1,7 @@
 load("http.star", "http")
 load("xpath.star", "xpath")
 load("render.star", "render")
-load("pixlib/const.star", "const")
+load("pixlib/const.star", "const") # https://github.com/DouweM/tap-pixlet/blob/main/tap_pixlet/pixlib/const.star
 
 URL = "https://www.owenwilsonfactory.com/facts?format=rss"
 

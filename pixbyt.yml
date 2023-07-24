@@ -1,0 +1,14 @@
+jobs:
+- name: owen-wilson-facts
+  tasks:
+  - tap-pixlet--owen-wilson-facts target-tidbyt
+- name: owen-wilson-facts--webp
+  tasks:
+  - tap-pixlet--owen-wilson-facts target-webp
+
+plugins:
+  extractors:
+  - name: tap-pixlet--owen-wilson-facts
+    inherit_from: tap-pixlet
+    config:
+      path: apps/owen-wilson-facts
